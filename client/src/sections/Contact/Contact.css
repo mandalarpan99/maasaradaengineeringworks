@@ -191,183 +191,132 @@
 }
 
 /* ══════════════════════════════════════════════
-   RIGHT COLUMN — Quote form card
+   RIGHT COLUMN — Google Form card
    ══════════════════════════════════════════════ */
-.contact__right { display: flex; flex-direction: column; }
-
-.contact__form-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  /* Top cobalt accent stripe */
-  border-top: 3px solid var(--cobalt);
-}
-
-/* ── Form ───────────────────────────── */
-.contact__form { padding: 2rem 2.25rem 2.25rem; }
-
-.form__header { margin-bottom: 1.75rem; }
-
-.form__title {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--white);
-  margin-bottom: 0.3rem;
-}
-
-.form__sub {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-}
-
-.form__req { color: var(--cobalt); font-style: normal; }
-
-/* Name / Phone row */
-.form__row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin-bottom: 0;
-}
-
-/* Individual field */
-.form__field {
+.contact__right {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
-  margin-bottom: 1.1rem;
 }
 
-.form__label {
+/* ── Outer card shell ───────────────────────── */
+.gform__card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--cobalt);
+  border-radius: var(--radius-md);
+  background: var(--card-bg);
+  overflow: hidden;
+  height: 100%;
+  min-height: 580px;
+}
+
+/* ── Header bar ─────────────────────────────── */
+.gform__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.25rem;
+  background: var(--gunmetal-dark);
+  border-bottom: 1px solid var(--border);
+  gap: 1rem;
+}
+
+.gform__header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.gform__header-icon { font-size: 1.2rem; }
+
+.gform__header-title {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--white);
+  line-height: 1.2;
+}
+
+.gform__header-sub {
+  display: block;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
+/* Google colour badge */
+.gform__google-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.3rem 0.65rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── iframe wrapper ─────────────────────────── */
+.gform__frame-wrap {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  /* Google Forms background is white — we let it show naturally
+     so respondents can read and interact with it clearly        */
+}
+
+.gform__iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  background: #fff;
+}
+
+/* ── Footer bar ─────────────────────────────── */
+.gform__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 1.25rem;
+  background: var(--gunmetal-dark);
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.gform__footer-note {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.gform__footer-note strong { color: var(--cobalt); }
+
+.gform__open-link {
   font-family: var(--font-display);
   font-size: 0.62rem;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--cobalt);
+  white-space: nowrap;
   transition: color var(--transition);
+  text-decoration: none;
 }
 
-.form__field--focus .form__label { color: var(--cobalt); }
-
-.form__input {
-  background: var(--gunmetal-dark);
-  border: 1px solid var(--border);
-  color: var(--white);
-  font-family: var(--font-body);
-  font-size: 0.9rem;
-  padding: 0.8rem 1rem;
-  border-radius: var(--radius-sm);
-  outline: none;
-  width: 100%;
-  transition: border-color var(--transition), box-shadow var(--transition);
-  -webkit-appearance: none;
-  appearance: none;
-}
-
-.form__input::placeholder {
-  color: var(--text-muted);
-  font-size: 0.84rem;
-}
-
-.form__input:focus {
-  border-color: var(--cobalt);
-  box-shadow: 0 0 0 3px rgba(0, 71, 171, 0.18);
-}
-
-/* Select arrow */
-.form__select {
-  cursor: pointer;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238C9BA0' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 1rem center;
-  padding-right: 2.5rem;
-}
-
-.form__select option {
-  background: var(--gunmetal-dark);
-  color: var(--white);
-}
-
-/* Textarea */
-.form__textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-/* Submit button */
-.form__submit {
-  width: 100%;
-  justify-content: center;
-  padding: 1rem !important;
-  font-size: 0.82rem !important;
-  margin-bottom: 1rem;
-  gap: 0.6rem;
-}
-
-.form__submit-arrow {
-  font-size: 1rem;
-  transition: transform var(--transition);
-}
-
-.form__submit:hover .form__submit-arrow { transform: translateX(4px); }
-
-.form__note {
-  font-size: 0.74rem;
-  color: var(--text-muted);
-  text-align: center;
-  line-height: 1.55;
-}
-
-.form__note strong { color: var(--cobalt); }
-
-/* ── Success state ──────────────────── */
-.contact__success {
-  padding: 4rem 2.25rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 1.1rem;
-  min-height: 380px;
-}
-
-.contact__success-ring {
-  width: 72px; height: 72px;
-  border-radius: 50%;
-  background: rgba(0, 71, 171, 0.15);
-  border: 2px solid var(--cobalt);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.contact__success-icon {
-  font-size: 2rem;
-  color: var(--cobalt);
-  font-style: normal;
-}
-
-.contact__success-title {
-  font-family: var(--font-display);
-  font-size: 1.6rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--cobalt);
-}
-
-.contact__success-sub {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  line-height: 1.75;
-  max-width: 300px;
-  margin-bottom: 0.5rem;
-}
+.gform__open-link:hover { color: var(--white); }
 
 /* ══════════════════════════════════════════════
    Responsive
@@ -377,14 +326,15 @@
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
-
   .contact__header-sub { max-width: 100%; }
   .contact__map-frame  { height: 240px; }
+  .gform__card         { min-height: 640px; }
 }
 
 @media (max-width: 600px) {
-  .contact { padding: 5rem 0 4rem; }
-  .form__row { grid-template-columns: 1fr; }
-  .contact__form { padding: 1.5rem; }
+  .contact          { padding: 5rem 0 4rem; }
   .contact__map-frame { height: 200px; }
+  .gform__card      { min-height: 700px; }
+  .gform__footer    { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+  .gform__header    { flex-wrap: wrap; }
 }

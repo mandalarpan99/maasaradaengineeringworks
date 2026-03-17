@@ -8,7 +8,6 @@ export default function Navbar() {
   const { t }                   = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const [open,     setOpen]     = useState(false);
-
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 60);
     window.addEventListener('scroll', fn);
@@ -30,9 +29,9 @@ export default function Navbar() {
       <div className="navbar__inner container">
         {/* Brand */}
         <button className="navbar__brand" onClick={() => go('hero')}>
-          <span className="navbar__brand-icon">◈</span>
+          <span className="navbar__brand-icon"><img src='./maasarada_logo2.png' width={60} /> </span>
           <span className="navbar__brand-text">
-            STEEL<span className="navbar__brand-accent">CRAFT</span>
+            {t.nav.line1} <span className="navbar__brand-accent">{t.nav.line2}</span>
           </span>
         </button>
 

@@ -168,8 +168,11 @@
 
 /* ── Responsive ──────────────────────────────────── */
 @media (max-width: 900px) {
+  .navbar{padding: 0 .6rem;}
   .navbar__links      { display: none; }
   .navbar__mobile-right { display: flex; }
   .navbar__ham        { display: flex; }
   .navbar__drawer     { display: flex; }
+  .navbar__brand-text{ font-size: .6rem;}
+  .navbar__brand-icon img{ width: 50px; margin: 0;}
 }

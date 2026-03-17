@@ -1,0 +1,265 @@
+/* ═══════════════════════════════════════════════════════
+   TestimonialsCarousel
+   ═══════════════════════════════════════════════════════ */
+
+.tc-carousel {
+  position: relative;
+  width: 100%;
+  padding-bottom: 3rem;    /* space for dots + counter */
+  user-select: none;
+}
+
+/* ── Progress bar ──────────────────────────────────────── */
+.tc-progress {
+  position: absolute;
+  top: -1px; left: 0; right: 0;
+  height: 3px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 2px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.tc-progress__bar {
+  height: 100%;
+  width: 0%;
+  background: var(--cobalt);
+  border-radius: 2px;
+  animation: progressFill linear forwards;
+  animation-duration: inherit;
+}
+
+.tc-progress__bar--paused {
+  animation-play-state: paused;
+}
+
+@keyframes progressFill {
+  from { width: 0%; }
+  to   { width: 100%; }
+}
+
+/* ── Arrow buttons ─────────────────────────────────────── */
+.tc-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(calc(-50% - 1.5rem));
+  z-index: 10;
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: var(--gunmetal);
+  border: 1.5px solid var(--border-strong);
+  color: var(--aluminum);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition),
+              color var(--transition), transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.tc-arrow--prev { left:  -20px; }
+.tc-arrow--next { right: -20px; }
+
+.tc-arrow:hover:not(:disabled) {
+  background: var(--cobalt);
+  border-color: var(--cobalt);
+  color: var(--white);
+  box-shadow: 0 0 18px rgba(0, 71, 171, 0.4);
+}
+
+.tc-arrow:disabled { opacity: 0.35; cursor: not-allowed; }
+
+/* ── Card track ────────────────────────────────────────── */
+.tc-track {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  padding: 0.75rem 0.25rem;
+}
+
+/* Slide-in animation — next direction */
+.tc-track--sliding.tc-track--next .tc-card {
+  animation: slideInNext 0.42s cubic-bezier(0.4, 0, 0.2, 1) both;
+  animation-delay: calc(var(--i) * 0.06s);
+}
+
+/* Slide-in animation — prev direction */
+.tc-track--sliding.tc-track--prev .tc-card {
+  animation: slideInPrev 0.42s cubic-bezier(0.4, 0, 0.2, 1) both;
+  animation-delay: calc(var(--i) * 0.06s);
+}
+
+@keyframes slideInNext {
+  from { opacity: 0; transform: translateX(36px) scale(0.97); }
+  to   { opacity: 1; transform: translateX(0)    scale(1);    }
+}
+
+@keyframes slideInPrev {
+  from { opacity: 0; transform: translateX(-36px) scale(0.97); }
+  to   { opacity: 1; transform: translateX(0)     scale(1);    }
+}
+
+/* ── Individual card ───────────────────────────────────── */
+.tc-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.75rem 1.5rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  position: relative;
+  transition: border-color var(--transition), box-shadow var(--transition),
+              transform var(--transition);
+  min-height: 220px;
+}
+
+.tc-card:hover {
+  border-color: var(--cobalt);
+  box-shadow: 0 12px 36px rgba(0, 71, 171, 0.18);
+  transform: translateY(-4px);
+}
+
+/* Large decorative quote mark */
+.tc-card__quote {
+  position: absolute;
+  top: 0.9rem; right: 1.1rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 4.5rem;
+  line-height: 1;
+  color: var(--cobalt);
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+/* ── Stars ──────────────────────────────────────────────── */
+.tc-stars { display: flex; gap: 0.15rem; }
+
+.tc-star {
+  font-size: 0.9rem;
+  color: var(--border-strong);
+  transition: color 0.2s;
+}
+
+.tc-star--on { color: #F59E0B; }   /* amber gold */
+
+/* ── Review text ────────────────────────────────────────── */
+.tc-card__text {
+  font-size: 0.875rem;
+  color: var(--aluminum-dim);
+  line-height: 1.75;
+  font-style: italic;
+  flex: 1;
+}
+
+/* ── Author row ─────────────────────────────────────────── */
+.tc-card__author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--border);
+  margin-top: auto;
+}
+
+.tc-card__avatar {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--cobalt);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 2px rgba(0, 71, 171, 0.3);
+}
+
+.tc-card__author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+}
+
+.tc-card__name {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--white);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tc-card__role {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Dot navigation ─────────────────────────────────────── */
+.tc-dots {
+  position: absolute;
+  bottom: 0.5rem; left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tc-dot {
+  width: 8px; height: 8px;
+  border-radius: 100px;
+  background: var(--border-strong);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background var(--transition), width var(--transition),
+              box-shadow var(--transition);
+}
+
+.tc-dot--active {
+  width: 24px;
+  background: var(--cobalt);
+  box-shadow: 0 0 8px rgba(0, 71, 171, 0.6);
+}
+
+/* ── Counter badge ──────────────────────────────────────── */
+.tc-counter {
+  position: absolute;
+  bottom: 0.3rem; right: 0;
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+/* ═══════════════════════════════════════════════════════
+   Responsive
+   ═══════════════════════════════════════════════════════ */
+
+/* Tablet — show 2 cards */
+@media (max-width: 900px) {
+  .tc-track { grid-template-columns: repeat(2, 1fr); }
+  .tc-arrow--prev { left:  -14px; }
+  .tc-arrow--next { right: -14px; }
+}
+
+/* Mobile — show 1 card */
+@media (max-width: 580px) {
+  .tc-track     { grid-template-columns: 1fr; }
+  .tc-arrow     { width: 36px; height: 36px; }
+  .tc-arrow--prev { left:  0; }
+  .tc-arrow--next { right: 0; }
+  .tc-card      { min-height: auto; }
+  .tc-carousel  { padding-left: 2rem; padding-right: 2rem; }
+}

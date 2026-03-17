@@ -34,9 +34,9 @@ export default function Footer() {
         <div className="container footer__grid">
           <div className="footer__col footer__col--brand">
             <button className="footer__brand" onClick={() => scrollTo('hero')}>
-              <span className="footer__brand-icon">◈</span>
+              <span className="footer__brand-icon"><img src='./maasarada_logo2.png' width={60} /></span>
               <span className="footer__brand-text">
-                STEEL<span className="footer__brand-accent">CRAFT</span>
+                {t.footer.line1}<span className="footer__brand-accent">{t.footer.line2}</span>
               </span>
             </button>
             <p className="footer__tagline">{f.tagline}</p>

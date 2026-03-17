@@ -8,6 +8,8 @@ export const translations = {
   en: {
     // ── Navbar ──────────────────────────────────────
     nav: {
+      line1: 'MAA SARADA',
+      line2: 'ENG. WORKS',
       services:  'Services',
       about:     'About',
       projects:  'Projects',
@@ -92,13 +94,13 @@ export const translations = {
       tag:    '— Who We Are —',
       title:  'Steel in Our',
       titleAccent: 'DNA.',
-      body1:  'SteelCraft was built in a small welding shed in Tejgaon, Dhaka in 2006 by a team of three fabricators who refused to cut corners. Today we operate a 12,000 sq ft workshop with 40 skilled craftsmen and a full design office.',
+      body1:  'Maa Sarada Eng. Works was built in a small welding shed at Dakshin Barasat, Joynagar in 2011 by a team of three fabricators who refused to cut corners. Today we operate a 12,000 sq ft workshop with 40 skilled craftsmen and a full design office.',
       body2:  'We serve residential homeowners, commercial developers, and industrial contractors across Bangladesh — delivering every project on schedule, to spec, and with a 5-year workmanship guarantee.',
       cta:    'Work With Us',
       creds: [
-        { val: '18+', lbl: 'Years'     },
-        { val: '40',  lbl: 'Craftsmen' },
-        { val: '5yr', lbl: 'Warranty'  },
+        { val: '15+', lbl: 'Years'     },
+        { val: '10',  lbl: 'Craftsmen' },
+        { val: '1yr', lbl: 'Warranty'  },
       ],
       badgeLbl: 'sq ft Workshop',
       whyUs: [
@@ -118,12 +120,12 @@ export const translations = {
       filters: ['All', 'Metal Fabrication', 'Collapsible Gate', 'Roof Shade', 'Metal Gate', 'Metal Windows'],
       empty:  'No projects in this category yet. Check back soon.',
       items: [
-        { title: 'Commercial Complex Gate',  category: 'Collapsible Gate',    location: 'Dhaka, BD' },
-        { title: 'Industrial Roof Canopy',   category: 'Roof Shade',          location: 'Chittagong, BD' },
-        { title: 'Residential Driveway Gate',category: 'Metal Gate',          location: 'Sylhet, BD' },
-        { title: 'Factory Window Grilles',   category: 'Metal Windows',       location: 'Gazipur, BD' },
-        { title: 'Car Park Shade Structure', category: 'Roof Shade',          location: 'Dhaka, BD' },
-        { title: 'Steel Security Grilles',   category: 'Metal Fabrication',   location: 'Narayanganj, BD' },
+        { title: 'Commercial Complex Gate',  category: 'Collapsible Gate',    location: 'Joynagar' },
+        { title: 'Industrial Roof Canopy',   category: 'Roof Shade',          location: 'Dhosahat' },
+        { title: 'Residential Driveway Gate',category: 'Metal Gate',          location: 'Dakshin Barasat' },
+        { title: 'Factory Window Grilles',   category: 'Metal Windows',       location: 'Padmarhat' },
+        { title: 'Car Park Shade Structure', category: 'Roof Shade',          location: 'Baharu' },
+        { title: 'Steel Security Grilles',   category: 'Metal Fabrication',   location: 'Tilpi' },
       ],
     },
 
@@ -143,9 +145,10 @@ export const translations = {
       title: 'What Clients',
       titleAccent: 'Say',
       items: [
-        { name: 'Rahman Enterprises', role: 'Commercial Client',  quote: 'SteelCraft delivered our entire gate and grille system two weeks ahead of schedule. Outstanding quality.' },
-        { name: 'Habib Construction', role: 'Industrial Partner', quote: 'We\'ve used them on 12 projects. Consistent quality, fair pricing, and zero call-backs.' },
-        { name: 'Rezwan Architects',  role: 'Design Firm',        quote: 'They bring our steel concepts to life exactly as drawn. The craftsmanship is impeccable.' },
+        { name: 'Animesh Das, Kolkata', role: 'Residential Gates & Windows', rating:4,  quote: 'Got our main entrance gate done by Maa Saradar. The finish and design are exceptional, and they delivered exactly on schedule.' },
+        { name: 'Sandeep Mukherjee, Durgapur', role: 'Roof Shades & Canopies',rating:5, quote: 'Our garage roof shade is incredibly sturdy and handles heavy rain perfectly. Professional engineering at its best.' },
+        { name: 'Mandal Constructions',  role: 'Industrial Clients (Heavy Fabrication)',rating:4.5,        quote: 'For industrial frames and fabrication, you can trust them blindly. Their 15+ years of experience shows in every weld.' },
+        { name: 'Sujit Biswas, Habra',  role: 'Security & Collapsible Gates',rating:5,        quote: 'They installed a high-quality collapsible gate in a tight space. Their security mechanism and installation care are highly impressive.' },
       ],
     },
 
@@ -179,6 +182,8 @@ export const translations = {
         note:        'Average response time:',
         noteStrong:  'under 4 hours',
         noteSuffix:  'during business days.',
+        poweredBy:  'Powered by Google Forms',
+        openInNew:  'Open form in new tab',
         services: [
           'Metal Fabrication',
           'Collapsible Gate',
@@ -198,6 +203,8 @@ export const translations = {
 
     // ── Footer ──────────────────────────────────────
     footer: {
+      line1:'MAA SARADA ',
+      line2:'ENG. WORKS',
       ctaTitle:  'Ready to start your project?',
       ctaSub:    'Get a free no-obligation quote within 24 hours.',
       ctaBtn:    'Get Free Quote →',
@@ -215,6 +222,8 @@ export const translations = {
   // ════════════════════════════════════════════════════════════════════
   bn: {
     nav: {
+      line1: 'মা সারদা',
+      line2: 'ইঞ্জিনিয়ারিং ওয়ার্কস',
       services:  'সেবাসমূহ',
       about:     'আমাদের সম্পর্কে',
       projects:  'প্রকল্পসমূহ',
@@ -296,13 +305,13 @@ export const translations = {
       tag:         '— আমরা কারা —',
       title:       'ইস্পাল আমাদের',
       titleAccent: 'রক্তে।',
-      body1:       'স্টিলক্রাফট ২০০৬ সালে তেজগাঁও, ঢাকায় একটি ছোট ওয়েল্ডিং শেডে তিনজন ফ্যাব্রিকেটর দ্বারা প্রতিষ্ঠিত হয়েছিল যারা মান নিয়ে আপোস করতে অস্বীকার করেছিলেন। আজ আমরা ৪০ জন দক্ষ কারিগর এবং একটি পূর্ণ ডিজাইন অফিস সহ ১২,০০০ বর্গ ফুটের কর্মশালা পরিচালনা করি।',
-      body2:       'আমরা সারা বাংলাদেশে আবাসিক গৃহস্বামী, বাণিজ্যিক ডেভেলপার এবং শিল্প ঠিকাদারদের সেবা দিই — প্রতিটি প্রকল্প সময়মতো, নির্ধারিত মান অনুযায়ী এবং ৫ বছরের কারিগরি গ্যারান্টি সহ।',
+      body1:       '২০১১ সাল থেকে প্রতিষ্ঠিত, মা সারদা ইঞ্জিনিয়ারিং ওয়ার্কস উন্নতমানের মেটাল ফেব্রিকেশন এবং মজবুত মেটাল গেট ও জানালা নির্মাণে বিশেষজ্ঞ। আমরা ছাদের শেড (Roof Shade), কোলাপসিবল গেট তৈরি এবং যেকোনো ধরণের মেটাল রিপেয়ারিং সার্ভিসের জন্য নির্ভরযোগ্য সমাধান প্রদান করি। গত ১৫ বছরের অভিজ্ঞতা এবং কারিগরি দক্ষতার সাথে আমরা আপনার ঘর বা ব্যবসার সুরক্ষায় নিখুঁত ও দীর্ঘস্থায়ী মেটাল কাজ নিশ্চিত করি।',
+      body2:       'আমরা সারা এলাকা আবাসিক গৃহস্বামী, বাণিজ্যিক ডেভেলপার এবং শিল্প ঠিকাদারদের সেবা দিই — প্রতিটি প্রকল্প সময়মতো, নির্ধারিত মান অনুযায়ী এবং ৫ বছরের কারিগরি গ্যারান্টি সহ।',
       cta:         'আমাদের সাথে কাজ করুন',
       creds: [
-        { val: '১৮+', lbl: 'বছর'       },
-        { val: '৪০',  lbl: 'কারিগর'    },
-        { val: '৫বছ', lbl: 'ওয়ারেন্টি' },
+        { val: '১৫+', lbl: 'বছর'       },
+        { val: '১০',  lbl: 'কারিগর'    },
+        // { val: '১বছর', lbl: 'ওয়ারেন্টি' },
       ],
       badgeLbl: 'বর্গ ফুট কর্মশালা',
       whyUs: [
@@ -321,12 +330,12 @@ export const translations = {
       filters:     ['সব', 'ধাতব তৈরি', 'ভাঁজযোগ্য গেট', 'ছাদ শেড', 'ধাতব গেট', 'ধাতব জানালা'],
       empty:       'এই বিভাগে এখনও কোনো প্রকল্প নেই। শীঘ্রই আসছে।',
       items: [
-        { title: 'বাণিজ্যিক কমপ্লেক্স গেট', category: 'ভাঁজযোগ্য গেট', location: 'ঢাকা, বিডি' },
-        { title: 'শিল্প ছাদ ক্যানোপি',       category: 'ছাদ শেড',        location: 'চট্টগ্রাম, বিডি' },
-        { title: 'আবাসিক ড্রাইভওয়ে গেট',    category: 'ধাতব গেট',       location: 'সিলেট, বিডি' },
-        { title: 'কারখানা জানালার গ্রিল',     category: 'ধাতব জানালা',    location: 'গাজীপুর, বিডি' },
-        { title: 'পার্কিং শেড কাঠামো',        category: 'ছাদ শেড',        location: 'ঢাকা, বিডি' },
-        { title: 'স্টিল সিকিউরিটি গ্রিল',   category: 'ধাতব তৈরি',      location: 'নারায়ণগঞ্জ, বিডি' },
+        { title: 'বাণিজ্যিক কমপ্লেক্স গেট', category: 'ভাঁজযোগ্য গেট', location: 'জয়নগর ' },
+        { title: 'শিল্প ছাদ ক্যানোপি',       category: 'ছাদ শেড',        location: 'ঢোসা হাট ' },
+        { title: 'আবাসিক ড্রাইভওয়ে গেট',    category: 'ধাতব গেট',       location: 'দক্ষিণ বারাসত' },
+        { title: 'কারখানা জানালার গ্রিল',     category: 'ধাতব জানালা',    location: 'পদ্মারহাট ' },
+        { title: 'পার্কিং শেড কাঠামো',        category: 'ছাদ শেড',        location: 'বহরু ' },
+        { title: 'স্টিল সিকিউরিটি গ্রিল',   category: 'ধাতব তৈরি',      location: 'তিলপি' },
       ],
     },
 
@@ -344,9 +353,10 @@ export const translations = {
       title:       'গ্রাহকরা কী',
       titleAccent: 'বলেন',
       items: [
-        { name: 'রহমান এন্টারপ্রাইজ', role: 'বাণিজ্যিক ক্লায়েন্ট',   quote: 'স্টিলক্রাফট আমাদের সম্পূর্ণ গেট ও গ্রিল সিস্টেম নির্ধারিত সময়ের দুই সপ্তাহ আগে সরবরাহ করেছে। অসাধারণ মান।' },
-        { name: 'হাবিব কনস্ট্রাকশন', role: 'শিল্প অংশীদার',           quote: 'আমরা ১২টি প্রকল্পে তাদের ব্যবহার করেছি। ধারাবাহিক মান, ন্যায্য মূল্য এবং শূন্য কল-ব্যাক।' },
-        { name: 'রেজওয়ান আর্কিটেক্টস', role: 'ডিজাইন ফার্ম',          quote: 'তারা আমাদের স্টিলের ধারণাগুলো ঠিক যেভাবে আঁকা হয়েছে সেভাবে জীবন্ত করে তোলে। কারিগরি দক্ষতা অতুলনীয়।' },
+        { name: 'অনিমেষ দাস, কলকাতা', role: 'আবাসিক গ্রাহক',rating:5,   quote: 'মা সারদা ইঞ্জিনিয়ারিং থেকে আমাদের বাড়ির মেইন গেট বানিয়েছি। ফিনিশিং এবং ডিজাইন এককথায় অসাধারণ, আর সময়মতো কাজ শেষ করেছেন।' },
+        { name: 'সন্দীপ মুখার্জি, দুর্গাপুর', role: 'বাণিজ্যিক গ্রাহক',rating:5,   quote: 'আমাদের গ্যারেজের রুফ শেডটি খুব মজবুতভাবে তৈরি করা হয়েছে। যেকোনো আবহাওয়ায় এটি টিকে থাকার মতো উন্নত মানের কাজ।"' },
+        { name: 'মন্ডল কনস্ট্রাকশন', role: 'ইন্ডাস্ট্রিয়াল ক্লায়েন্ট',rating:5,       quote: 'ইন্ডাস্ট্রিয়াল শেড এবং ফ্যাব্রিকেশনের জন্য এদের ওপর চোখ বন্ধ করে ভরসা করা যায়। ১১ বছরের অভিজ্ঞতার ছাপ প্রতিটি ওয়েল্ডিংয়ে দেখা যায়।' },
+        { name: 'সুজিত বিশ্বাস, হাবড়া', role: 'সিকিউরিটি গেট গ্রাহক',rating:5,       quote: '"অল্প জায়গায় খুব সুন্দর একটি কোলাপসিবল গেট ইনস্টল করে দিয়েছেন। এদের মেকানিজম এবং সুরক্ষা ব্যবস্থা সত্যিই প্রশংসনীয়।' },
       ],
     },
 
@@ -379,6 +389,8 @@ export const translations = {
         note:       'গড় প্রতিক্রিয়া সময়:',
         noteStrong: '৪ ঘণ্টার মধ্যে',
         noteSuffix: 'কর্মদিবসে।',
+        poweredBy:  'গুগল ফর্ম দ্বারা পরিচালিত',
+        openInNew:  'নতুন ট্যাবে ফর্ম খুলুন',
         services: [
           'ধাতব তৈরি',
           'ভাঁজযোগ্য গেট',
@@ -397,6 +409,8 @@ export const translations = {
     },
 
     footer: {
+      line1: 'মা সারদা ',
+      line2: 'ইঞ্জি. ওয়ার্কস',
       ctaTitle:    'আপনার প্রকল্প শুরু করতে প্রস্তুত?',
       ctaSub:      '২৪ ঘণ্টার মধ্যে বিনামূল্যে কোটেশন পান।',
       ctaBtn:      'বিনামূল্যে কোটেশন →',
