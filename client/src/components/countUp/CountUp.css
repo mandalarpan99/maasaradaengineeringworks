@@ -1,0 +1,6 @@
+.countup {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--cobalt);
+  font-variant-numeric: tabular-nums;
+}

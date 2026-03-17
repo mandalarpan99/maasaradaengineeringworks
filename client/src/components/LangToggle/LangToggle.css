@@ -1,0 +1,82 @@
+/* ── Language Toggle — animated pill ─────────────────────────────── */
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  /* Prevent accidental text selection on quick clicks */
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.lang-toggle__track {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 72px;
+  height: 30px;
+  border-radius: 100px;
+  background: var(--gunmetal-mid);
+  border: 1.5px solid var(--border-strong);
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.lang-toggle:hover .lang-toggle__track {
+  border-color: var(--cobalt);
+}
+
+/* Sliding cobalt thumb */
+.lang-toggle__thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: calc(50% - 2px);
+  height: calc(100% - 4px);
+  border-radius: 100px;
+  background: var(--cobalt);
+  box-shadow: 0 0 10px rgba(0, 71, 171, 0.5);
+  transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+/* When Bengali is active — slide thumb to the right */
+.lang-toggle--bn .lang-toggle__thumb {
+  transform: translateX(calc(100% + 4px));
+}
+
+/* Labels */
+.lang-toggle__label {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  transition: color 0.25s ease;
+  line-height: 1;
+  /* Bengali script needs a touch more line height */
+}
+
+.lang-toggle__label--bn {
+  font-family: 'Noto Sans Bengali', 'SolaimanLipi', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0;
+}
+
+.lang-toggle__label.active {
+  color: var(--white);
+}
+
+/* ── Responsive ────────────────────── */
+@media (max-width: 480px) {
+  .lang-toggle__track {
+    width: 64px;
+    height: 28px;
+  }
+}
