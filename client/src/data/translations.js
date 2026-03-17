@@ -132,8 +132,8 @@ export const translations = {
     // ── Stats ───────────────────────────────────────
     stats: {
       items: [
-        { value: '18+',    label: 'Years Experience',  icon: '🏆' },
-        { value: '3,200+', label: 'Projects Delivered', icon: '📐' },
+        { value: '15+',    label: 'Years Experience',  icon: '🏆' },
+        { value: '1,200+', label: 'Projects Delivered', icon: '📐' },
         { value: '500+',   label: 'Happy Clients',      icon: '🤝' },
         { value: '100%',   label: 'Site Safety Record', icon: '🛡️' },
       ],
@@ -341,8 +341,8 @@ export const translations = {
 
     stats: {
       items: [
-        { value: '১৮+',    label: 'বছরের অভিজ্ঞতা',     icon: '🏆' },
-        { value: '৩,২০০+', label: 'প্রকল্প সম্পন্ন',    icon: '📐' },
+        { value: '১৫+',    label: 'বছরের অভিজ্ঞতা',     icon: '🏆' },
+        { value: '১,২০০+', label: 'প্রকল্প সম্পন্ন',    icon: '📐' },
         { value: '৫০০+',   label: 'সন্তুষ্ট গ্রাহক',    icon: '🤝' },
         { value: '১০০%',   label: 'সাইট নিরাপত্তা রেকর্ড', icon: '🛡️' },
       ],

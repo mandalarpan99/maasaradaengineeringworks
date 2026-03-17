@@ -13,7 +13,7 @@ const MAP_EMBED_URL =
 //       2. Copy the src="..." value from the <iframe> code
 //       3. Paste it below, replacing the placeholder URL
 const GOOGLE_FORM_URL =
-  'https://docs.google.com/forms/d/e/YOUR_FORM_ID_HERE/viewform?embedded=true';
+  'https://forms.gle/18zUraFEaUVM8JXh8';
 
 export default function ContactSection() {
   const [refL, inViewL] = useInView(0.08);

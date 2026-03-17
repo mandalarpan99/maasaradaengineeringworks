@@ -104,7 +104,7 @@ export const PROJECTS = [
 
 export const STATS = [
   { value: '15+',   label: 'Years Experience',   icon: '🏆' },
-  { value: '2,200+',label: 'Projects Delivered',  icon: '📐' },
+  { value: '1,200+',label: 'Projects Delivered',  icon: '📐' },
   { value: '500+',  label: 'Happy Clients',        icon: '🤝' },
   { value: '100%',  label: 'Site Safety Record',   icon: '🛡️' },
 ];

@@ -1,9 +1,11 @@
 import { useTranslation } from '../../context/LanguageContext';
 import { scrollTo } from '../../hooks/useInView';
 import './Footer.css';
-
 const SERVICE_HREFS = ['services','services','services','services','services','services'];
-
+import { FaFacebook } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
 export default function Footer() {
   const { t } = useTranslation();
   const f     = t.footer;
@@ -14,6 +16,12 @@ export default function Footer() {
     { label: t.nav.projects, href: 'projects' },
     { label: t.nav.whyUs,    href: 'stats'    },
     { label: t.nav.contact,  href: 'contact'  },
+  ];
+  const social_links   = [
+    { label: <FaFacebook />,    href: 'https://www.facebook.com/profile.php?id=61574225489455' },
+    { label: <FaYoutube />,    href: 'about'    },
+    { label: <FaInstagram />,    href: 'projects' },
+    { label: <FaLinkedin />,    href: 'stats'    },
   ];
 
   return (
@@ -41,8 +49,8 @@ export default function Footer() {
             </button>
             <p className="footer__tagline">{f.tagline}</p>
             <div className="footer__socials">
-              {['FB', 'WA', 'IN', 'YT'].map((s) => (
-                <a key={s} href="#" className="footer__social">{s}</a>
+              {social_links.map((s) => (
+                <a key={s} href={s.href} className="footer__social" target='_blank'>{s.label}</a>
               ))}
             </div>
           </div>
@@ -50,10 +58,10 @@ export default function Footer() {
           <div className="footer__col">
             <h4 className="footer__col-title">{f.colServices}</h4>
             <ul className="footer__list">
-              {sv.map((s) => (
-                <li key={s.id}>
+              {sv.map((i) => (
+                <li key={i.id}>
                   <button className="footer__list-link" onClick={() => scrollTo('services')}>
-                    {s.title}
+                    {i.title}
                   </button>
                 </li>
               ))}

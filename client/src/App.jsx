@@ -9,6 +9,8 @@ import ProjectsSection from './sections/Projects/Projects';
 import StatsSection    from './sections/Stats/Stats';
 import ContactSection  from './sections/Contact/Contact';
 import Footer          from './sections/Footer/Footer';
+//-------------------Icons____________________
+
 
 export default function App() {
   return (

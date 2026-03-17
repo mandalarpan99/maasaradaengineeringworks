@@ -130,7 +130,15 @@
   color: var(--white);
   background: rgba(0,71,171,0.15);
 }
-
+.footer__social svg{
+  width: 2em !important;
+  height: 2em !important;
+  transition: color 0.8s ease-out 0s, width 0.5s ease-out 0s;
+}
+.footer__social svg:hover{
+  color: var(--social-link);
+  
+}
 /* ── List cols ───────────────────── */
 .footer__col-title {
   font-family: var(--font-display);
