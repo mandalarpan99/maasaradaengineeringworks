@@ -1,6 +1,6 @@
 import { useInView } from '../../hooks/useInView';
 import { useTranslation } from '../../context/LanguageContext';
-import {CountUp} from '../../components/CountUp/CountUp';
+import {CountUp} from '../components/CountUp/CountUp';
 import TestimonialsCarousel from '../../components/TestimonialsCarousel/TestimonialsCarousel';
 import { STATS } from '../../data/constants';
 import './Stats.css';
