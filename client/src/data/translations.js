@@ -20,7 +20,7 @@ export const translations = {
 
     // ── Hero ────────────────────────────────────────
     hero: {
-      eyebrow:    'Kolkata, WB · Est. 2006',
+      eyebrow:    'Kolkata, WB · Est. 2011',
       line1:      'WE BUILD',
       line2:      'STEEL',
       line3:      'THAT LASTS.',
@@ -95,7 +95,7 @@ export const translations = {
       title:  'Steel in Our',
       titleAccent: 'DNA.',
       body1:  'Maa Sarada Eng. Works was built in a small welding shed at Dakshin Barasat, Joynagar in 2011 by a team of three fabricators who refused to cut corners. Today we operate a 12,000 sq ft workshop with 40 skilled craftsmen and a full design office.',
-      body2:  'We serve residential homeowners, commercial developers, and industrial contractors across Bangladesh — delivering every project on schedule, to spec, and with a 5-year workmanship guarantee.',
+      body2:  'We serve residential homeowners, commercial developers, and industrial contractors across the area — delivering every project on schedule, to spec, and with a 5-year workmanship guarantee.',
       cta:    'Work With Us',
       creds: [
         { val: '15+', lbl: 'Years'     },
@@ -208,7 +208,7 @@ export const translations = {
       ctaTitle:  'Ready to start your project?',
       ctaSub:    'Get a free no-obligation quote within 24 hours.',
       ctaBtn:    'Get Free Quote →',
-      tagline:   'Precision metal fabrication, gates, roof shades & windows. Built to last — since 2006.',
+      tagline:   'Precision metal fabrication, gates, roof shades & windows. Built to last — since 2011.',
       colServices: 'Services',
       colNav:      'Navigation',
       colContact:  'Contact',
