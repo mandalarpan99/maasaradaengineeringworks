@@ -108,7 +108,7 @@ proxy: {
 },
 ```
 
----
+-----
 
 ## Responsive Breakpoints
 
