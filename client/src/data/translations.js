@@ -20,7 +20,7 @@ export const translations = {
 
     // ── Hero ────────────────────────────────────────
     hero: {
-      eyebrow:    'Kolkata, WB · Est. 2011',
+      eyebrow:    'D. Barasat, WB · Est. 2011',
       line1:      'WE BUILD',
       line2:      'STEEL',
       line3:      'THAT LASTS.',
@@ -233,7 +233,7 @@ export const translations = {
     },
 
     hero: {
-      eyebrow:    'কলকাতা, পঃ বঃ, ২০১৫',
+      eyebrow:    'দক্ষিন বারাশত, পঃ বঃ, ২০১১',
       line1:      'মজবুত',
       line2:      'ইস্পাত নির্মাণই',
       line3:      'আমাদের অঙ্গীকার।',
