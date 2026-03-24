@@ -13,7 +13,7 @@ export default function StatsSection() {
   return (
     <>
       {/* ─── Stats bar new ────────────────────────────────── */}
-      {/* <section id="stats" className="stats">
+      <section id="stats" className="stats">
         <div className="container stats__inner" ref={ref}>
           {t.stats.items.map((s, i) => (
             <div
@@ -29,10 +29,10 @@ export default function StatsSection() {
             </div>
           ))}
         </div>
-      </section> */}
+      </section>
 
       {/* ── Stats bar — always English, never translated --old── */}
-            <section id="stats" className="stats">
+            {/* <section id="stats" className="stats">
               <div className="container stats__inner" ref={ref}>
                 {STATS.map((s, i) => (
                   <div
@@ -48,7 +48,7 @@ export default function StatsSection() {
                   </div>
                 ))}
               </div>
-            </section>
+            </section> */}
 
       {/* ─── Testimonials Carousel ────────────────────── */}
       <section className="testimonials">

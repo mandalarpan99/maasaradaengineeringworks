@@ -5,12 +5,12 @@ import './Services.css';
 
 // Images are static — keep them mapped by id
 const SERVICE_IMGS = {
-  fabrication: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=500&q=80',
-  gate:        'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80',
-  roofshade:   'https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=500&q=80',
-  metalgate:   'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&q=80',
-  windows:     'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=500&q=80',
-  welding:     'https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=500&q=80',
+  fabrication: 'https://i.pinimg.com/736x/91/dd/5d/91dd5d5701e3de91b93e0f27e4b55645.jpg',
+  gate:        'https://i.pinimg.com/1200x/bc/58/14/bc5814c50a17bd6561b725b65db0c9ef.jpg',
+  roofshade:   'https://i.pinimg.com/1200x/1a/46/49/1a4649d8970a6ae116bf75e7e8b8897e.jpg',
+  metalgate:   'https://i.pinimg.com/1200x/39/2a/1c/392a1ca41fada577cb49a08f1c895cf7.jpg',
+  windows:     'https://i.pinimg.com/736x/3b/5d/cc/3b5dcc9d5ad4d0dd59a989e447bc4995.jpg',
+  welding:     'https://i.pinimg.com/736x/ef/67/14/ef6714786802ec9da6309be92e69b85f.jpg',
 };
 
 export default function ServicesSection() {

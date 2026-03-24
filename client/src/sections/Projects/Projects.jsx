@@ -4,12 +4,12 @@ import { useTranslation } from '../../context/LanguageContext';
 import './Projects.css';
 
 const PROJECT_IMGS = [
-  'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=700&q=80',
-  'https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=700&q=80',
-  'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80',
-  'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=700&q=80',
-  'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=700&q=80',
-  'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=700&q=80',
+  'https://i.pinimg.com/736x/d3/8a/e1/d38ae1c76aa816065c498ff2a150c368.jpg',
+  'https://i.pinimg.com/736x/b3/f5/0d/b3f50d03a41df0fc6cdc84aa569a374e.jpg',
+  'https://i.pinimg.com/1200x/64/28/c9/6428c9ff90e31e9fe80aaeab9c0ed337.jpg',
+  'https://i.pinimg.com/1200x/0f/56/13/0f561332aa922924d8d82bc8143a1ecf.jpg',
+  'https://i.pinimg.com/474x/e9/ca/0d/e9ca0d15c32b7163712d588738da6c62.jpg',
+  'https://i.pinimg.com/736x/57/f2/17/57f217d479f28387c14e56c2bec65e3c.jpg',
 ];
 
 // Structural category keys (language-agnostic index)
