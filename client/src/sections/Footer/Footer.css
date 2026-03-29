@@ -103,7 +103,7 @@
   max-width: 280px;
 }
 
-.footer__socials {
+/* .footer__socials {
   display: flex;
   gap: 0.6rem;
   margin-top: 0.25rem;
@@ -115,7 +115,7 @@
   align-items: center;
   justify-content: center;
   background: var(--card-bg);
-  border: 1px solid var(--border);
+  border: 2px solid var(--border);
   border-radius: var(--radius-sm);
   font-family: var(--font-display);
   font-size: 0.62rem;
@@ -130,15 +130,26 @@
   color: var(--white);
   background: rgba(0,71,171,0.15);
 }
+.footer__social:hover:nth-child(2),
+.footer__social:hover:nth-child(3)  {
+  border-color: #eb053a;
+  color: var(--white);
+  background: #C84069;
+}
 .footer__social svg{
   width: 2em !important;
   height: 2em !important;
   transition: color 0.8s ease-out 0s, width 0.5s ease-out 0s;
-}
-.footer__social svg:hover{
-  color: var(--social-link);
+} */
+/* .footer__social svg:hover{
+  color: var(--cobalt);
   
 }
+.footer__social svg:hover:nth-child(2),
+.footer__social svg:hover:nth-child(3) {
+  color: #eb053a;
+  
+} */
 /* ── List cols ───────────────────── */
 .footer__col-title {
   font-family: var(--font-display);
@@ -236,4 +247,54 @@
   .footer__col--brand { grid-column: span 1; }
   .footer__bottom-inner { flex-direction: column; align-items: flex-start; }
   .footer__legal     { flex-wrap: wrap; gap: 1rem; }
+}
+
+
+/* ── Social icons strip ────────────────────────── */
+.footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.footer__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px; height: 32px;
+  border-radius: var(--radius-sm);
+  color: var(--aluminum-dim);
+  background: transparent;
+  border: 1px solid transparent;
+  text-decoration: none;
+  transition: color var(--transition), background var(--transition),
+              border-color var(--transition), transform 0.2s ease,
+              box-shadow 0.2s ease;
+  flex-shrink: 0;
+}
+
+.footer__social:hover {
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.footer__social--facebook:hover {
+  background: #1877F2;
+  border-color: #1877F2;
+  box-shadow: 0 4px 14px rgba(24,119,242,0.4);
+}
+.footer__social--whatsapp:hover {
+  background: #25D366;
+  border-color: #25D366;
+  box-shadow: 0 4px 14px rgba(37,211,102,0.4);
+}
+.footer__social--instagram:hover {
+  background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+  border-color: #e6683c;
+  box-shadow: 0 4px 14px rgba(220,39,67,0.4);
+}
+.footer__social--youtube:hover {
+  background: #FF0000;
+  border-color: #FF0000;
+  box-shadow: 0 4px 14px rgba(255,0,0,0.35);
 }

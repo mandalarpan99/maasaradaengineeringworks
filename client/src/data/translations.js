@@ -27,6 +27,7 @@ export const translations = {
       sub:        'Metal fabrication, collapsible gates, roof shades, metal gates & windows — engineered to precision, installed with care.',
       ctaPrimary: 'Get Free Quote',
       ctaSecond:  'Our Work',
+      socialLink: 'Follow us on',
       pills: [
         'Metal Fabrication',
         'Collapsible Gates',
@@ -240,6 +241,7 @@ export const translations = {
       sub:        'মেটাল ফ্যাব্রিকেশন থেকে শুরু করে মজবুত গেট ও জানালা — নিখুঁত নকশা আর সঠিক নিপুণতায় আমরা পৌঁছে দিই আপনার কাছে।',
       ctaPrimary: 'বিনামূল্যে কোটেশন',
       ctaSecond:  'আমাদের কাজ',
+      socialLink: 'আমাদের অনুসরণ করুন',
       pills: [
         'ধাতব তৈরি',
         'কলাপসেবল গেট',

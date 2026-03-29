@@ -1,0 +1,381 @@
+/* ═══════════════════════════════════════════════════
+   Navbar — fully responsive with inline social icons
+   ═══════════════════════════════════════════════════ */
+
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  transition: background 0.35s ease, box-shadow 0.35s ease;
+  padding: 0 2rem;
+}
+
+.navbar--scrolled {
+  background: rgba(30, 37, 40, 0.97);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 2px 28px rgba(0, 0, 0, 0.45);
+  border-bottom: 1px solid var(--border);
+}
+
+/* ── Inner row ─────────────────────────────────── */
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  gap: 0.5rem;
+}
+
+/* ── Brand ─────────────────────────────────────── */
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.navbar__brand-icon {
+  font-size: 1.4rem;
+  color: var(--cobalt);
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.navbar__brand:hover .navbar__brand-icon {
+  transform: rotate(30deg) scale(1.1);
+}
+
+.navbar__brand-text {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--white);
+}
+
+.navbar__brand-accent { color: var(--cobalt); }
+
+/* ── Desktop nav row ───────────────────────────── */
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.navbar__link {
+  background: none;
+  border: none;
+  color: var(--aluminum-dim);
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  padding: 0.5rem 0.65rem;
+  cursor: pointer;
+  transition: color var(--transition);
+  position: relative;
+  white-space: nowrap;
+}
+
+.navbar__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%; right: 50%;
+  height: 2px;
+  background: var(--cobalt);
+  transition: left 0.3s ease, right 0.3s ease;
+}
+
+.navbar__link:hover             { color: var(--white); }
+.navbar__link:hover::after      { left: 0.65rem; right: 0.65rem; }
+
+/* ── Vertical divider ──────────────────────────── */
+.navbar__divider {
+  width: 1px;
+  height: 20px;
+  background: var(--border-strong);
+  margin: 0 0.35rem;
+  flex-shrink: 0;
+}
+
+/* ── Social icons strip ────────────────────────── */
+.navbar__socials {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.navbar__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px; height: 32px;
+  border-radius: var(--radius-sm);
+  color: var(--aluminum-dim);
+  background: transparent;
+  border: 1px solid transparent;
+  text-decoration: none;
+  transition: color var(--transition), background var(--transition),
+              border-color var(--transition), transform 0.2s ease,
+              box-shadow 0.2s ease;
+  flex-shrink: 0;
+}
+
+.navbar__social:hover {
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.navbar__social--facebook:hover {
+  background: #1877F2;
+  border-color: #1877F2;
+  box-shadow: 0 4px 14px rgba(24,119,242,0.4);
+}
+.navbar__social--whatsapp:hover {
+  background: #25D366;
+  border-color: #25D366;
+  box-shadow: 0 4px 14px rgba(37,211,102,0.4);
+}
+.navbar__social--instagram:hover {
+  background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+  border-color: #e6683c;
+  box-shadow: 0 4px 14px rgba(220,39,67,0.4);
+}
+.navbar__social--youtube:hover {
+  background: #FF0000;
+  border-color: #FF0000;
+  box-shadow: 0 4px 14px rgba(255,0,0,0.35);
+}
+
+/* ── CTA button ────────────────────────────────── */
+.navbar__cta {
+  margin-left: 0.35rem;
+  font-size: 0.7rem !important;
+  padding: 0.62rem 1.2rem !important;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── Hamburger ─────────────────────────────────── */
+.navbar__ham {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 210;
+  position: relative;
+}
+
+.navbar__ham span {
+  display: block;
+  width: 24px; height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
+.navbar__ham--open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.navbar__ham--open span:nth-child(2) { opacity: 0; }
+.navbar__ham--open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+/* ── Mobile right group ────────────────────────── */
+.navbar__mobile-right {
+  display: none;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* ── Overlay backdrop (dims page behind drawer) ─── */
+.navbar__backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 190;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  animation: backdropFadeIn 0.25s ease forwards;
+}
+
+@keyframes backdropFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ─────────────────────────────────────────────────
+   MOBILE DRAWER  — slides in from the right
+   ───────────────────────────────────────────────── */
+.navbar__drawer {
+  /* Hidden state */
+  position: fixed;
+  top: 0; right: 0;
+  width: min(300px, 82vw);
+  height: 100dvh;            /* full viewport height, accounts for mobile browser bars */
+  background: var(--gunmetal-dark);
+  border-left: 1px solid var(--border);
+  box-shadow: -8px 0 40px rgba(0,0,0,0.5);
+  z-index: 205;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  /* Slide transition */
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar__drawer--open {
+  transform: translateX(0);
+}
+
+/* Hide on desktop — only display:flex is toggled on mobile */
+@media (min-width: 901px) {
+  .navbar__drawer { display: none !important; }
+}
+
+/* ── Drawer nav links ───────────────────────────── */
+.navbar__drawer-links {
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;   /* clear the fixed navbar height */
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar__drawer-link {
+  background: none;
+  border: none;
+  color: var(--aluminum);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 1rem 1.5rem;
+  text-align: left;
+  cursor: pointer;
+  border-bottom: 1px solid var(--border);
+  transition: color var(--transition), background var(--transition),
+              padding-left var(--transition);
+}
+
+.navbar__drawer-link:last-child { border-bottom: none; }
+
+.navbar__drawer-link:hover {
+  color: var(--white);
+  background: rgba(0, 71, 171, 0.1);
+  padding-left: 2rem;
+}
+
+/* ── Drawer social section ──────────────────────── */
+.navbar__drawer-social-section {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar__drawer-social-title {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--cobalt);
+  margin-bottom: 0.85rem;
+}
+
+.navbar__drawer-socials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+}
+
+.navbar__drawer-social {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  color: var(--aluminum-dim);
+  text-decoration: none;
+  transition: color var(--transition), background var(--transition),
+              border-color var(--transition), transform 0.2s ease;
+}
+
+.navbar__drawer-social:hover { transform: translateY(-2px); }
+
+/* Individual platform hover colours in drawer */
+.navbar__drawer-social.navbar__social--facebook:hover  {
+  color: #fff; background: rgba(24,119,242,0.15); border-color: #1877F2;
+}
+.navbar__drawer-social.navbar__social--whatsapp:hover  {
+  color: #fff; background: rgba(37,211,102,0.15); border-color: #25D366;
+}
+.navbar__drawer-social.navbar__social--instagram:hover {
+  color: #fff; background: rgba(225,48,108,0.15); border-color: #E1306C;
+}
+.navbar__drawer-social.navbar__social--youtube:hover   {
+  color: #fff; background: rgba(255,0,0,0.15);    border-color: #FF0000;
+}
+
+.navbar__drawer-social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.navbar__drawer-social-label {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ── Drawer CTA ────────────────────────────────── */
+.navbar__drawer-cta-wrap {
+  padding: 1.25rem 1.5rem;
+  margin-top: auto;
+}
+
+.navbar__cta--mobile {
+  width: 100%;
+  justify-content: center;
+  font-size: 0.78rem !important;
+  padding: 0.9rem !important;
+}
+
+/* ═══════════════════════════════════════════════════
+   Responsive breakpoints
+   ═══════════════════════════════════════════════════ */
+
+/* Medium desktops — compact spacing */
+@media (max-width: 1100px) {
+  .navbar__link    { padding: 0.5rem 0.5rem; font-size: 0.66rem; }
+  .navbar__social  { width: 29px; height: 29px; }
+  .navbar__divider { margin: 0 0.25rem; }
+}
+
+/* Tablet / mobile — hide desktop nav, show hamburger */
+@media (max-width: 900px) {
+  .navbar__links        { display: none; }
+  .navbar__mobile-right { display: flex; }
+  .navbar__ham          { display: flex; }
+}
+
+/* Small mobile adjustments */
+@media (max-width: 420px) {
+  .navbar                        { padding: 0 1rem; }
+  .navbar__brand-text            { font-size: 1.1rem; }
+  .navbar__drawer                { width: 100vw; }
+  .navbar__drawer-socials        { grid-template-columns: repeat(2, 1fr); }
+}
